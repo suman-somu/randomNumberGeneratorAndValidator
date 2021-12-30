@@ -4,16 +4,14 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class passGenerator {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
 
         System.out.println("please enter "+"\n 1 to start "+"\n 2 to exit");
         Scanner sc= new Scanner(System.in);
         int enter= sc.nextInt();
         if(enter ==1){
-            System.out.println("how long you want your password ?");
-            int len= sc.nextInt();
-            startFunction(len);
+            startFunction();
         }
         else if(enter ==2){
             System.out.println("thank you for using this");
@@ -25,7 +23,12 @@ public class passGenerator {
 
     }
 
-    private static void startFunction(int len) {
+    private static void startFunction() {
+
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("how long you want your password ?");
+        int len= sc.nextInt();
 
 
         String password ="";
@@ -64,6 +67,9 @@ public class passGenerator {
         }
 
         System.out.println(password);
+
+
+
     }
 
 
@@ -123,4 +129,5 @@ public class passGenerator {
         return s;
 
     }
+
 }
